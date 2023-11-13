@@ -7,7 +7,7 @@
 </head>
 <body>
     <style>
-        #animado{
+        #red{
             width: 100px;
             height: 100px;
             position: absolute;
@@ -24,8 +24,28 @@
             from{top: 0px; left: 0px;}
             to{top: -200px; left: -200px;}
         }
+
+        #blue{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /*
+            top: 0px;
+            left: 0px;
+            */
+            background-color: blue;
+            animation-name: descer;
+            animation-duration: 4s;
+        }
+
+        @keyframes descer{
+            from{top: 0px; left: 0px;}
+            to{top: 200px; left: 200px;}
+        }
     </style>
 
-    <div id="animado"></div>
+    <div id="red"></div>
+
+    <div id="blue"></div>
 </body>
 </html>
