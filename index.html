@@ -44,6 +44,29 @@
             from{top: 0px; left: 0px;}
             to{top: 200px; left: 200px;}
         }
+
+        #green{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /*
+            top: 0px;
+            left: 0px;
+            */
+            background-color: green;
+            animation-name: circular;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes circular{
+            0%{
+                rotate: 0deg;
+            }
+            100%{
+                rotate: 360deg;
+            }
+        }
     </style>
 
     <div id="red"></div>
