@@ -49,22 +49,25 @@
             width: 100px;
             height: 100px;
             position: absolute;
-            /*
-            top: 0px;
-            left: 0px;
-            */
+            
+            top: 300 px;
+            left: 300 px;
             background-color: green;
             animation-name: circular;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
+            animation: circle 6s linear infinite;
         }
 
         @keyframes circular{
             0%{
-                rotate: 0deg;
+                transform:rotate(0deg)
+                        translate(-165px)
+                        rotate(0deg);
+            
             }
             100%{
-                rotate: 360deg;
+                transform:rotate(360deg)
+                        translate(-165px)
+                        rotate(-360deg);
             }
         }
     </style>
