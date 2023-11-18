@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #red{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /*
+            top: 0px;
+            left: 0px;
+            */
+            background-color: red;
+            animation-name: andar;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes andar{
+            from{top: 200px; left: 200px;}
+            to{top: 800px; left: 800px;}
+        }
+
+        #blue{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /*
+            top: 0px;
+            left: 0px;
+            */
+            background-color: blue;
+            animation-name: descer;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes descer{
+            from{top: 0px; left: 0px;}
+            to{top: 200px; left: 200px;}
+        }
+        body{
+            background:black;
+            color: #fff;
+        }
+
+        .main{
+            width:330px;
+            height:330px;
+            /* border:1px solid #CCC; */
+            position:absolute;
+            top:0; bottom:0; left:0;right:0;
+            margin:auto;
+            /* border-radius:50%; */ 
+        }
+
+        .circle{
+            width:100px;
+            height:100px;
+            background:green;
+            position:absolute;
+            top:0; bottom:0; left:0;right:0;
+            overflow:hidden;
+            margin:auto;
+            animation: circle 6s linear infinite;
+        }
+
+        @keyframes circle{
+        0%{
+            transform:rotate(0deg)
+                    translate(-165px)
+                    rotate(0deg);
+        
+        }
+        100%{
+            transform:rotate(360deg)
+                    translate(-165px)
+                    rotate(-360deg);
+        }
+        }
+    </style>
+
+    <div id="red"></div>
+
+    <div id="blue"></div>
+    <div class="main">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
